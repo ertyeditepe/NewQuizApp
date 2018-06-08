@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/home_page"
+    android:id="@+id/arkaPlan"
+    tools:context=".QuizActivity"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="20dp"
+            android:hint="@string/name"
+            android:textColorHint="@android:color/white"
+            android:textSize="17sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/gender"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="30dp"
+            android:id="@+id/genderGroup"
+            android:layout_marginRight="30dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/genderMale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Male"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/genderFemale"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Female"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+
+            <RadioButton
+                android:id="@+id/genderUnknown"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="Unknown"
+                android:textColor="@android:color/white"
+                android:textSize="17sp" />
+        </RadioGroup>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:gravity="center"
+            android:text="@string/smokeQuestion"
+            android:textColor="@android:color/white"
+            android:textSize="17sp" />
+
+        <LinearLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/yesButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:onClick="yesButton"
+                android:background="#3f51b5"
+                android:layout_marginRight="4dp"
+                android:text="Yes" />
+
+            <Button
+                android:id="@+id/noButton"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="noButton"
+                android:layout_marginLeft="4dp"
+                android:background="?attr/colorPrimary"
+                android:text="No" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/hiddenPartLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:gravity="center"
+                    android:text="@string/durationQuestion"
+                    android:textColor="@android:color/white" />
+
+                <Spinner
+                    android:id="@+id/durationSpinnerView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:entries="@array/duration">
+                </Spinner>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:text="@string/riskQuestion"
+                android:textColor="@android:color/white" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="40dp"
+                android:orientation="vertical">
+
+                <CheckBox
+                    android:id="@+id/c1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Going Blind"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@android:color/holo_blue_dark"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/c2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Type 2 Diabetes"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@android:color/holo_blue_dark"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/c3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Erectile Dysfunction"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@android:color/holo_blue_dark"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/c4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Ectopic Pregnancy"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@android:color/holo_blue_dark"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/c5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hip Fractures"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@android:color/holo_blue_dark"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/c6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Colorectal Cancer"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@android:color/holo_blue_dark"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/c7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Fertility Issues"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@android:color/holo_blue_dark"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/c8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Gum Disease"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@android:color/holo_blue_dark"
+                    android:textSize="17sp" />
+
+                <CheckBox
+                    android:id="@+id/c9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="50dp"
+                    android:text="High Cholesterol"
+                    android:textColor="@android:color/white"
+                    android:textColorLink="@android:color/holo_blue_dark"
+                    android:textSize="17sp" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="30dp"
+                    android:background="#3f51b5"
+                    android:text="Send Feedback"
+                    android:onClick="sendFeedback"
+                    android:textColor="#ffffff"
+                    android:padding="5dp"
+                    android:textSize="17sp" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

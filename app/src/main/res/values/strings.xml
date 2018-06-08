@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">Quiz App</string>
+    <string name="durationQuestion">How many years have you been using it ?</string>
+    <string name="smokeQuestion">Do you smoke ?</string>
+    <string name="name">Enter your name</string>
+    <string name="riskQuestion">Do you know these risks of smoking ?</string>
+    <string name="gender">Select your gender</string>
+
+    <string-array name="duration">
+        <item>Less than 1 year</item>
+        <item>1-2 years</item>
+        <item>3-5 years</item>
+        <item>6-10 years</item>
+        <item>More than 10 year</item>
+    </string-array>
+
+</resources>
